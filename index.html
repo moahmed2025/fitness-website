@@ -1,0 +1,1220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FITCORE</title>
+    <link rel="shortcut icon" href="loogo1.jpeg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+      integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+                :root {
+                  /* Colors */
+                  --primary-color: #ff4d00;
+                  --secondary-color: #111111;
+                  --background-color: #0a0a0a;
+                  --card-color: #171717;
+                  --border-color: #2a2a2a;
+
+                  /* Text Colors */
+                  --text-color: #ffffff;
+                  --text-light: #f5f5f5;
+                  --text-muted: #b5b5b5;
+                  --text-dark: #222222;
+
+                  /* Fonts */
+                  --heading-font: "Oswald", sans-serif;
+                  --subheading-font: "Montserrat", sans-serif;
+                  --paragraph-font: "Poppins", sans-serif;
+                }
+                * {
+                  margin: 0;
+                  padding: 0;
+                  box-sizing: border-box;
+                }
+                body {
+                  /* background-color: var(--background-color); */
+                  background-color: var(--background-color);
+                  line-height: 1.5;
+                  color: white;
+                }
+                header {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  flex-wrap: wrap;
+                  background-color: var(--text-color);
+                  position: fixed;
+                  top: 0;
+                  right: 0;
+                  left: 0;
+                  backdrop-filter: blur(50px);
+                }
+                .logo-name {
+                  font-size: 1.4rem;
+                  padding: 10px;
+                  margin-left: 25px;
+                  font-weight: bold;
+                  font-family: var(--heading-font);
+                  color: var(--border-color);
+                }
+                .core {
+                  color: var(--primary-color);
+                }
+                .nav-links {
+                  padding: 35px;
+                }
+                .nav-links li {
+                  list-style: none;
+                }
+
+                .link {
+                  display: flex;
+                  gap: 20px;
+                  justify-content: space-between;
+                  align-items: center;
+                }
+
+                header a {
+                  color: var(--primary-color);
+                  text-decoration: none;
+                  font-family: var(--heading-font);
+                  font-size: 1rem;
+                  font-weight: bold;
+                  margin-right: 10px;
+                  margin-top: 10px;
+                  transition:
+                    text-decoration 5s,
+                    ease-in;
+                }
+                header a:hover {
+                  text-decoration: underline;
+                }
+                /* ================= HOME SECTION ================= */
+
+                .home-section {
+                  background-image:
+                    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                    url("https://i.pinimg.com/736x/f2/42/45/f242453b1c7e21aac953e55d58727888.jpg");
+
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-attachment: fixed;
+
+                  padding: 100px 20px;
+                  width: 100%;
+                }
+
+                /* Main Home Content */
+
+                .home-content {
+                  max-width: 1200px;
+                  margin: auto;
+
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  gap: 60px;
+                }
+
+                /* ================= LEFT SIDE ================= */
+
+                .home-text {
+                  width: 50%;
+                }
+
+                .heading-home {
+                  font-family: var(--heading-font);
+                  font-size: 2.8rem;
+                  color: var(--text-color);
+                  line-height: 1.2;
+                  margin-bottom: 25px;
+                }
+
+                .home-span {
+                  color: var(--primary-color);
+                  display: block;
+                  font-size: 3.5rem;
+                }
+
+                .home-spans {
+                  color: var(--text-color);
+                  display: inline;
+                  font-size: 3.5rem;
+                  margin-left: 0;
+                }
+
+                /* Paragraph */
+
+                .home-pragraph {
+                  font-family: var(--paragraph-font);
+                  font-size: 1.1rem;
+                  line-height: 1.8;
+                  color: var(--text-light);
+                  max-width: 550px;
+                  margin-bottom: 30px;
+                }
+
+                /* Buttons */
+
+                .home-buttons {
+                  display: flex;
+                  gap: 15px;
+                }
+
+                .home-btn {
+                  display: inline-block;
+                  text-decoration: none;
+
+                  background-color: var(--primary-color);
+                  color: var(--text-color);
+
+                  padding: 12px 25px;
+                  border-radius: 5px;
+
+                  font-family: var(--subheading-font);
+                  font-weight: bold;
+
+                  transition:
+                    transform 0.3s ease,
+                    background-color 0.3s ease;
+                }
+
+                .home-btn:hover {
+                  transform: translateY(-4px);
+                }
+
+                .second-btn {
+                  background-color: transparent;
+                  border: 2px solid var(--primary-color);
+                }
+
+                /* ================= RIGHT SIDE ================= */
+                /*
+          .home-right {
+            width: 50%;
+          } */
+
+                /* Image */
+
+                .home-image {
+                  width: 100%;
+                  height: 400px;
+
+                  object-fit: cover;
+
+                  border-radius: 10px;
+                  margin-top: 6rem;
+                  display: block;
+                }
+
+                /* ================= WHY CHOOSE ================= */
+
+                .why-choose-containe {
+                  margin-top: 25px;
+                }
+
+                .why-choose-heading {
+                  font-family: var(--subheading-font);
+                  font-size: 2rem;
+                  color: var(--text-color);
+                  margin-right: 9rem;
+                  text-align: right;
+
+                  margin-bottom: 15px;
+                }
+
+                /* Items Container */
+
+                .choose-items {
+                  display: flex;
+                  justify-content: flex-end;
+                  flex-wrap: wrap;
+                  gap: 12px;
+                }
+
+                /* Individual Items */
+
+                .choose-item {
+                  background-color: var(--text-light);
+
+                  border-radius: 10px;
+
+                  box-shadow: 0 8px 15px var(--border-color);
+
+                  padding: 15px 18px;
+
+                  color: var(--primary-color);
+
+                  font-family: var(--subheading-font);
+                  font-size: 0.9rem;
+                  font-weight: bold;
+
+                  transition: transform 0.3s ease-in-out;
+                }
+
+                .choose-item:hover {
+                  transform: translateY(-5px);
+                }
+                /* about section */
+                .abot-heading {
+                  text-align: center;
+                  padding: 10px;
+                  font-size: 3rem;
+                  font-weight: bold;
+                  margin-top: 40px;
+                }
+                .abot-headings {
+                  font-family: var(--paragraph-font);
+                  color: var(--text-muted);
+                  max-width: 650px;
+                  margin: 0 30rem 50px;
+                  line-height: 1.7;
+                }
+
+                .imgage-pragraph-about {
+                  display: flex;
+                  justify-content: space-around;
+                  align-items: center;
+                  flex-wrap: wrap;
+                  gap: 40px;
+                }
+
+                .about-image {
+                  width: 600px;
+                  height: 530px;
+                  object-fit: cover;
+                  border-radius: 6px;
+                  margin-left: 3rem;
+                }
+
+                .about-praghrph {
+                  font-family: var(--paragraph-font);
+                  font-size: 1.1rem;
+                  line-height: 1.8;
+                  color: white;
+                  max-width: 550px;
+                  width: 100%;
+                  margin-left: 3rem;
+                }
+                .vission-mission-container {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 30px;
+                  width: 100%;
+                  max-width: 800px;
+                  margin: 4rem auto;
+                  height: auto;
+                }
+                .miss-viss-items {
+                  background-color: var(--card-color);
+                  padding: 30px;
+                  box-shadow: black 0 3px 18px;
+                  border-radius: 20px;
+                }
+                .miss-viss-heading {
+                  font-size: 2rem;
+                  font-weight: bold;
+                  color: #d2541e;
+                  font-family: var(--subheading-font);
+                }
+                .miss-viss-pragraph {
+                  font-family: var(--paragraph-font);
+                  font-size: 1.1rem;
+                  line-height: 1.8;
+                  color: rgba(0, 0, 0, 0.4);
+
+                  color: var(--text-muted);
+                }
+                /* our services */
+                .services-section {
+                  background-color: var(--background-color);
+                  padding: 80px 30px;
+                  text-align: center;
+                }
+
+                .section-heading {
+                  font-family: var(--heading-font);
+                  font-size: 3rem;
+                  color: var(--text-color);
+                  margin-bottom: 15px;
+                }
+
+                .section-description {
+                  font-family: var(--paragraph-font);
+                  color: var(--text-muted);
+                  max-width: 650px;
+                  margin: 0 auto 50px;
+                  line-height: 1.7;
+                }
+
+                .services-container {
+                  max-width: 1200px;
+                  margin: auto;
+
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  gap: 25px;
+                }
+
+                .service-card {
+                  background-color: var(--card-color);
+                  border: 1px solid var(--border-color);
+                  padding: 35px 25px;
+                  border-radius: 10px;
+
+                  transition: border-color 0.3s ease;
+                }
+
+                .service-card:hover {
+                  border-color: var(--primary-color);
+                }
+
+                .service-card i {
+                  font-size: 2.5rem;
+                  color: var(--primary-color);
+                  margin-bottom: 20px;
+                }
+
+                .service-card h3 {
+                  font-family: var(--subheading-font);
+                  color: var(--text-color);
+                  font-size: 1.4rem;
+                  margin-bottom: 15px;
+                }
+
+                .service-card p {
+                  font-family: var(--paragraph-font);
+                  color: var(--text-muted);
+                  line-height: 1.7;
+                  font-size: 0.95rem;
+                }
+                /* Trainers-section */
+                .Trainers-section{
+                  background-color: var(--card-color);
+                  width: 85%;
+                  margin: 40px auto;
+                  padding: 100px;
+                }
+                .Trainers-headin{
+                  font-family: var(--heading-font);
+                  font-size: 3rem;
+                  color: var(--text-color);
+                  margin-bottom: 15px;
+                  text-align: center;
+
+                }
+                .Trainers-container{
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 20px;
+
+                }
+                .Trainers-item{
+                  background-color: var(--border-color);
+                  border-radius: 10px;
+                  padding: 30px;
+                  box-shadow: 0 7px 18px var(--text-dark);
+
+                }
+                .Trainers-headings{
+                  font-size: 1.6rem;
+                  padding: 10px;
+                  font-weight: bold;
+                  font-family: var(--subheading-font);
+                color: var(--text-muted);
+                }
+                .fa-solid{
+                  color: var(--primary-color);
+                  font-size: 2rem;
+                  font-weight: bold;
+                  margin-right: 3px;
+                }
+                /* pricing-section */
+                .pricing-section{
+                  width: 100%;
+                  margin: 50px;
+                  padding:3rem ;
+
+                }
+                .pricing-heading{
+                     font-family: var(--heading-font);
+                  font-size: 3rem;
+                  color: var(--text-color);
+                  margin-bottom: 15px;
+                  text-align: center;
+                }
+                .pricing-container{
+                  display: flex;
+                  /* flex-wrap: wrap; */
+                  gap: 30px;
+                  justify-content: center;
+                  align-items: center;
+                }
+                .pricing-item{
+                  background-color: var(--card-color);
+                  padding: 5rem ;
+                  border-radius: 10px;
+                  box-shadow: var(--secondary-color) 0 4px 14px;
+                }
+                .pricing-item:nth-child(2){
+                  border: 2px solid var(--primary-color);
+                }
+                .pricing-plan{
+                  color:  var(--text-light);
+                  font-size: 2.2rem;
+                  font-family: var(--subheading-font);
+                  font-weight: bold;
+                  margin-left: 20px;
+                }
+                .pricing-price{
+                  font-family: var(--text-muted);
+                  font-size: 2rem;
+                  text-align: center;
+                   margin-left:10px;
+
+                }
+                .pricing-features{
+                  font-family: var(--paragraph-font);
+                  color: var(--text-muted);
+                  font-size: 1.1rem;
+                  line-height: 1.9;
+                }
+                .pricing-button{
+                  display: block;
+                  text-decoration: none;
+                  background-color: var(--primary-color);
+                  color: var(--text-color);
+                  padding: 12px 25px;
+                  border-radius: 5px;
+                  font-family: var(--subheading-font);
+                  font-weight: bold;
+                  margin-top: 20px;
+                  font-size: 1.1rem;
+                  text-align: center;
+                }
+                .gellary-section{
+                  width: 100%;
+                  margin: 50px;
+                  padding:3rem ;
+                }
+                .our-gellery{
+                  font-family: var(--heading-font);
+                  font-size: 3rem;
+                  color: var(--text-color);
+                  margin-bottom: 15px;
+                  text-align: center;
+                }
+                .gellary-container{
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  gap: 30px;
+                  justify-content: center;
+                  align-items: center;
+                  overflow: hidden;
+                }
+                .gellary-image{
+                  width: 100%;
+                  height: 300px;
+                  object-fit: cover;
+                  border-radius: 10px;
+                }
+                /* our testimonials */
+                /* ================= TESTIMONIALS ================= */
+
+.testimonials-section {
+  background-color: var(--background-color);
+  padding: 80px 30px;
+  text-align: center;
+}
+
+.testimonials-heading {
+  font-family: var(--heading-font);
+  font-size: 3rem;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.testimonials-intro {
+  font-family: var(--paragraph-font);
+  color: var(--text-muted);
+  max-width: 650px;
+  margin: 0 auto 50px;
+  line-height: 1.7;
+}
+
+
+/* Cards Container */
+
+.testimonials-container {
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
+}
+
+
+/* Card */
+
+.testimonial-card {
+  flex: 1;
+  background-color: var(--card-color);
+
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+
+  padding: 35px 25px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+  transition: transform 0.3s ease,
+              border-color 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary-color);
+}
+
+
+/* Quote Icon */
+
+.testimonial-card > i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+
+/* Text */
+
+.testimonial-text {
+  font-family: var(--paragraph-font);
+  color: var(--text-muted);
+
+  font-size: 1rem;
+  line-height: 1.8;
+
+  margin-bottom: 25px;
+}
+
+
+/* Name */
+
+.testimonial-card h3 {
+  font-family: var(--subheading-font);
+  color: var(--text-color);
+
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+
+/* Member Type */
+
+.testimonial-card span {
+  font-family: var(--paragraph-font);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+
+/* Rating */
+
+.rating {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin-top: 15px;
+  letter-spacing: 3px;
+}
+/* ================= CONTACT SECTION ================= */
+
+.contact-section {
+  background-color: var(--card-color);
+  padding: 80px 20px;
+
+}
+
+/* Heading */
+
+.contact-heading {
+  font-family: var(--heading-font);
+  font-size: 3rem;
+  color: var(--text-color);
+  margin-bottom: 15px;
+  text-align: center;
+
+}
+
+/* Description */
+
+.contact-description {
+  font-family: var(--paragraph-font);
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 650px;
+  margin: 0 10px;
+  line-height: 1.7;
+  text-align: left;
+}
+
+/* Form */
+
+.contact-form {
+  width: 100%;
+  max-width: 650px;
+  margin-top: 30px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Inputs */
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+
+  padding: 15px 18px;
+
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+  font-family: var(--paragraph-font);
+  font-size: 1rem;
+
+  outline: none;
+
+  transition: border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+/* Focus */
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px rgba(255, 77, 0, 0.3);
+}
+
+/* Textarea */
+
+.contact-form textarea {
+  height: 180px;
+  resize: vertical;
+}
+
+/* Button */
+
+.contact-form button {
+  padding: 14px 25px;
+
+  background-color: var(--primary-color);
+  color: var(--text-color);
+
+  border: none;
+  border-radius: 8px;
+
+  font-family: var(--subheading-font);
+  font-size: 1rem;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: transform 0.3s ease,
+              background-color 0.3s ease;
+}
+
+/* Button Hover */
+
+.contact-form button:hover {
+  transform: translateY(-4px);
+  background-color: #e64400;
+}
+/* footer-section */
+.footer-section{
+  padding: 60px;
+  background-color: var(--secondary-color);
+}
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.quick-links-heading{
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 15px;
+   color: var(--primary-color);
+}
+.links{
+  display: inline;
+  list-style: none;
+  line-height: 1.6;
+  letter-spacing: 0.8px;
+  font-family: var(--heading-font);
+ 
+
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.copyright{
+  text-align: center;
+}
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2 class="logo-name">FIT <span class="core">CORE</span></h2>
+      <nav class="nav-links">
+        <ul class="link">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#trainers">Trainers</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+       <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- home section -->
+    <section id="home" class="home-section">
+      <div class="home-content">
+        <!-- Left Side -->
+        <div class="home-text">
+          <h2 class="heading-home">
+            Build Your Body and
+            <span class="home-span">
+              <span class="home-spans">Build</span>
+              Your Confidence
+            </span>
+          </h2>
+
+          <p class="home-pragraph">
+            Transform your body, strengthen your mind, and become the best
+            version of yourself. At FITCORE, we provide the right environment,
+            expert trainers, and effective workouts to help you reach your
+            fitness goals.
+          </p>
+
+          <div class="home-buttons">
+            <a href="#pricing" class="home-btn">Join Now</a>
+            <a href="#workouts" class="home-btn second-btn">Explore Workouts</a>
+          </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="home-right">
+          <img
+            src="https://i.pinimg.com/736x/d3/e4/7d/d3e47d7c6bd1cd9e811471faa33ab004.jpg"
+            alt="FITCORE workout"
+            class="home-image"
+          />
+
+          <!-- Why Choose Us -->
+          <div class="why-choose-containe">
+            <h2 class="why-choose-heading">Why Choose Us</h2>
+
+            <div class="choose-items">
+              <div class="choose-item">Expert Trainers</div>
+
+              <div class="choose-item">Modern Equipment</div>
+
+              <div class="choose-item">Flexible Workouts</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about section -->
+    <section id="about" class="about section">
+      <h2 class="abot-heading">about FITCORE</h2>
+      <h2 class="abot-headings">We Are More Than Just a Gym</h2>
+      <div class="imgage-pragraph-about">
+        <img
+          src="https://i.pinimg.com/1200x/de/96/d4/de96d42522618d602ea8bd1c5152f862.jpg"
+          alt=""
+          class="about-image"
+        />
+        <p class="about-praghrph">
+          FITCORE is a modern fitness center dedicated to helping people become
+          stronger, healthier, and more confident. We believe that fitness is
+          not only about building a better body, but also about developing a
+          stronger mind and a healthier lifestyle.
+
+          <br />
+          Our gym provides a motivating environment, modern equipment,
+          professional trainers, and effective workout programs designed for
+          different fitness levels and goals.
+        </p>
+      </div>
+      <h2 class="abot-heading">Our Purpose</h2>
+      <div class="vission-mission-container">
+        <div class="miss-viss-items">
+          <h2 class="miss-viss-heading">
+            <i class="fa-solid fa-bullseye"></i> Our Mission
+          </h2>
+          <p class="miss-viss-pragraph">
+            Our mission is to inspire and support people on their fitness
+            journey by providing quality training, expert guidance, and a
+            positive environment where everyone can improve.
+          </p>
+        </div>
+        <div class="miss-viss-items">
+          <h2 class="miss-viss-heading">
+            <i class="fa-regular fa-eye"></i> Our Vision
+          </h2>
+          <p class="miss-viss-pragraph">
+            Our vision is to become a trusted fitness community where people
+            feel motivated to challenge themselves, achieve their goals, and
+            live healthier
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- our services -->
+    <section id="services" class="services-section">
+      <h2 class="section-heading">Our Services</h2>
+
+      <p class="section-description">
+        We provide professional fitness services designed to help you build
+        strength, improve your health, and achieve your fitness goals.
+      </p>
+
+      <div class="services-container">
+        <div class="service-card">
+          <i class="fa-solid fa-dumbbell"></i>
+          <h3>Strength Training</h3>
+          <p>
+            Build muscle, increase strength, and improve your overall physical
+            performance with effective strength workouts.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <i class="fa-solid fa-person-running"></i>
+          <h3>Cardio Training</h3>
+          <p>
+            Improve your endurance, burn calories, and keep your heart healthy
+            with our cardio training programs.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <i class="fa-solid fa-user-tie"></i>
+          <h3>Personal Training</h3>
+          <p>
+            Get one-on-one guidance from professional trainers who help you
+            follow a workout plan designed for your goals.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <i class="fa-solid fa-heart-pulse"></i>
+          <h3>Fitness Programs</h3>
+          <p>
+            Follow structured fitness programs suitable for beginners,
+            intermediate members, and advanced athletes.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <i class="fa-solid fa-person-yoga"></i>
+          <h3>Flexibility Training</h3>
+          <p>
+            Improve your flexibility, balance, and mobility through stretching
+            and flexibility exercises.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <i class="fa-solid fa-people-group"></i>
+          <h3>Group Workouts</h3>
+          <p>
+            Train with others, stay motivated, and enjoy energetic group workout
+            sessions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="Trainers-section">
+      <h2 class="Trainers-headin">OUR Trainers</h2>
+      <div class="Trainers-container">
+        <div class="Trainers-item">
+          <h2 class="Trainers-headings">
+            <i class="fa-solid fa-dumbbell"></i> Michael Brown
+          </h2>
+          <p class="Trainers-pragraph">
+            Specializes in strength and conditioning programs designed to
+            improve power, endurance, and physical performance.
+          </p>
+        </div>
+        <div class="Trainers-item">
+          <h2 class="Trainers-headings">
+            <i class="fa-solid fa-user-tie"></i> Alex Johnson
+          </h2>
+          <p class="Trainers-pragraph">
+            Experienced fitness coach specializing in strength training, muscle
+            building, and overall fitness development.
+          </p>
+        </div>
+        <div class="Trainers-item">
+          <h2 class="Trainers-headings">
+            <i class="fa-solid fa-heart-pulse"></i> Emily Davis
+          </h2>
+          <p class="Trainers-pragraph">
+            Helps members improve flexibility, mobility, balance, and maintain a
+            healthy and active lifestyle.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- pricing -->
+    <section class="pricing-section">
+      <h2 class="pricing-heading">OUR Pricing Plans</h2>
+      <div class="pricing-container">
+        <div class="pricing-item">
+          <h2 class="pricing-plan">
+            <i
+              class="fa-solid fa-dumbbell"
+              style="display: block; margin-left: 30px"
+            ></i>
+            Basic Plan
+          </h2>
+          <p class="pricing-price">$29.99/month</p>
+          <ul class="pricing-features">
+            <li>Access to gym equipment</li>
+            <li>1 group class per week</li>
+            <li>Locker room access</li>
+          </ul>
+          <a href="#join" class="pricing-button">Join Now</a>
+        </div>
+        <div class="pricing-item">
+          <h2 class="pricing-plan">
+            <i
+              class="fa-solid fa-fire"
+              style="display: block; margin-left: 30px"
+            ></i>
+            Standard Plan
+          </h2>
+          <p class="pricing-price">$49.99/month</p>
+          <ul class="pricing-features">
+            <li>Access to gym equipment</li>
+            <li>3 group classes per week</li>
+            <li>Locker room access</li>
+            <li>1 personal training session per month</li>
+          </ul>
+          <a href="#join" class="pricing-button">Join Now</a>
+        </div>
+        <div class="pricing-item">
+          <h2 class="pricing-plan">
+            <i
+              class="fa-solid fa-crown"
+              style="display: block; margin-left: 30px"
+            ></i>
+            Premium Plan
+          </h2>
+          <p class="pricing-price">$79.99/month</p>
+          <ul class="pricing-features">
+            <li>Access to gym equipment</li>
+            <li>Unlimited group classes</li>
+            <li>Locker room access</li>
+            <li>4 personal training sessions per month</li>
+            <li>Nutrition consultation</li>
+          </ul>
+          <a href="#join" class="pricing-button">Join Now</a>
+        </div>
+      </div>
+    </section>
+    <!-- gallery section -->
+     <section class="gellary-section">
+      <h2 class="our-gellery">Our Gallery</h2>
+      <div class="gellary-container">
+        <div class="gellary-item">
+          <img src="https://i.pinimg.com/1200x/97/5b/02/975b02cde075c300b1a2f67e02f5b64a.jpg" alt="Gallery Image 1" class="gellary-image">
+        </div>
+        <div class="gellary-item">
+          <img src="https://i.pinimg.com/736x/ec/37/cb/ec37cb49cea92c427193c072e04a479f.jpg" alt="Gallery Image 2" class="gellary-image">
+        </div>
+        <div class="gellary-item">
+          <img src="https://i.pinimg.com/736x/af/21/04/af210437330ab71f4fbc246fcd6beb70.jpg" alt="Gallery Image 3" class="gellary-image">
+        </div>
+        <div class="gellary-item">
+          <img src="https://i.pinimg.com/736x/8e/25/bf/8e25bf612fa9338c6e08eb5f553d4daa.jpg" alt="Gallery Image 3" class="gellary-image">
+        </div>
+        <div class="gellary-item">
+          <img src="https://i.pinimg.com/1200x/c6/5c/a1/c65ca1d73061432c9fb63ba4014d307e.jpg" alt="Gallery Image 4" class="gellary-image">
+        </div>
+        <div class="gellary-item">
+          <img src="https://i.pinimg.com/1200x/26/48/e1/2648e167874bba01f9f3f973664f68d3.jpg" alt="Gallery Image 5" class="gellary-image">
+        </div>
+      </div>
+           
+      </section>
+      <!-- Testimonials Section -->
+<section id="testimonials" class="testimonials-section">
+
+  <h2 class="testimonials-heading">What Our Members Say</h2>
+
+  <p class="testimonials-intro">
+    Real experiences from people who are working hard and getting real results
+    with FITCORE.
+  </p>
+
+  <div class="testimonials-container">
+
+    <div class="testimonial-card">
+      <i class="fa-solid fa-quote-left"></i>
+
+      <p class="testimonial-text">
+        FITCORE has completely changed my approach to fitness. The trainers
+        are supportive, professional, and always ready to help.
+      </p>
+
+      <h3>Ahmed Hassan</h3>
+      <span>Fitness Member</span>
+
+      <div class="rating">
+        ★★★★★
+      </div>
+    </div>
+
+
+    <div class="testimonial-card">
+      <i class="fa-solid fa-quote-left"></i>
+
+      <p class="testimonial-text">
+        I joined FITCORE to lose weight and improve my health. The workouts
+        are challenging, but the friendly environment keeps me motivated.
+      </p>
+
+      <h3>Sarah Mohamed</h3>
+      <span>Fitness Member</span>
+
+      <div class="rating">
+        ★★★★★
+      </div>
+    </div>
+
+
+    <div class="testimonial-card">
+      <i class="fa-solid fa-quote-left"></i>
+
+      <p class="testimonial-text">
+        The equipment is excellent and the trainers really understand how to
+        help you reach your goals. I have seen a big improvement in my strength.
+      </p>
+
+      <h3>Michael Ali</h3>
+      <span>Fitness Member</span>
+
+      <div class="rating">
+        ★★★★★
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<section class="contact-section">
+    <h2 class="contact-heading">Contact Us</h2>
+    <p class="contact-description">
+      Have questions or want to get in touch? Fill out the form below and we will <br> get back to you as soon as possible.
+    </p>
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+</section>
+<section class="footer-section">
+  <div class="footer-container">
+    <div class="footer-items">
+      <h2 class="logo-name">FIT <span class="core">CORE</span></h2>
+    </div>
+    <div class="footer-items">
+      <h2 class="quick-links-heading">Quick Links</h2>
+        <ul class="links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#trainers">Trainers</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+       <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="footer-items">
+      <h2 class="quick-links-heading">our services</h2>
+        <ul class="links">
+         <li>Strength Training</li>
+         <li>Cardio Training</li>
+         <li>Fitness Assessment</li>
+         <li>Personal Training</li>
+        </ul>
+    </div>
+    <div class="footer-items">
+      <h2 class="quick-links-heading">our trainers</h2>
+        <ul class="links">
+         <li>John Doe</li>
+         <li>Jane Smith</li>
+         <li>Mike Johnson</li>
+         <li>Sarah Williams</li>
+        </ul>
+    </div>
+    <div class="footer-items">
+      <h2 class="quick-links-heading">our pricing</h2>
+        <ul class="links">
+         <li>Standard Plan</li>
+         <li>Premium Plan</li>
+         <li>basic Plan</li>
+        
+        </ul>
+    </div>
+    <div class="footer-items">
+      <h2 class="quick-links-heading">contact</h2>
+        <ul class="links">
+         <li>6156376</li>
+         <li>info@fitcore.com</li>
+         <li>123 Fitness Street, Health City</li>
+        
+        </ul>
+    </div>
+
+  </div>
+
+    <p class="copyright">&copy; 2024 FITCORE. All rights reserved.</p>
+
+</section>
+  </body>
+</html>
